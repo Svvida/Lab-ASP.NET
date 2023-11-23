@@ -33,7 +33,7 @@
                     <td>@employee.Position</td>
                     <td>@employee.Department</td>
                     <td>@employee.HireDate.ToShortDateString()</td>
-                    <td>@(employee.TerminationDate != null ? employee.TerminationDate.Value.ToShortDateString() : "")</td>
+                    <td>@(employee.TerminationDate != null ? employee.TerminationDate.ToShortDateString() : "")</td>
                     <td>
                         <a asp-action="Details" asp-route-id="@employee.Id">Details</a> |
                         <a asp-action="Edit" asp-route-id="@employee.Id">Edit</a> |
