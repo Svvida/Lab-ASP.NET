@@ -35,7 +35,7 @@
                     <td>@employee.Position</td>
                     <td>@employee.Department</td>
                     <td>@employee.HireDate.ToShortDateString()</td>
-                    <td>@employee.TerminationDate.ToShortDateString()</td>
+                    <td>@employee.TerminationDate.ToString().Split()[0]</td>
                     <td>@employee.Priority</td>
                     <td>
                         <a asp-action="Details" asp-route-id="@employee.Id">Details</a> |
