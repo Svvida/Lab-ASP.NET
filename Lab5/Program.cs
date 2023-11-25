@@ -1,7 +1,4 @@
-using Data;
-using Lab4.Models;
-
-namespace Lab4
+namespace Lab5
 {
     public class Program
     {
@@ -11,10 +8,6 @@ namespace Lab4
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddDbContext<AppDbContext>();
-            //builder.Services.AddSingleton<IEmployeeService, MemoryEmployeeService>();
-            builder.Services.AddSingleton<IDateTimeProvider, CurrentDataTimeProvider>();
-            builder.Services.AddTransient<IEmployeeService, EFContactService>();
 
             var app = builder.Build();
 
